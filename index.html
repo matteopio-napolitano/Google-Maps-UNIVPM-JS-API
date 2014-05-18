@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Google Maps JavaScript API v3</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+
+        <!-- inclusione librerie -->
+        <script type="text/javascript" src="js/vendor/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+
+        <!--
+            E' preferibile caricare le API di Google Maps tramite HTTPS sia per applicazioni
+            che fanno uso del SSL sia per applicazioni raggiungibili tramite HTTP.
+            Da sottolineare che è possibile caricare le API GMaps anche attreverso richiesta
+            HTTP ma, nel caso l'applicazione sia accessibile tramite HTTPS è necessario che anche
+            le API GMaps siano richieste tramite HTTPS altrimenti potrebbero essere generate
+            eccezioni di sicurezza da parte del browser
+        -->
+        <script type="text/javascript"
+                src="https://maps.googleapis.com/maps/api/js?libraries=drawing,places&key=AIzaSyD9_Cuaz-dasrbjt2y-UnFAoxIDHVxjgJw&sensor=false">
+        </script>
+
+        <!-- libreria di supporto per la personalizzazione delle InfoWindow -->
+        <script type="text/javascript" src="js/vendor/infobox.js"></script>
+
+        <!-- inclusione librerie di pagina -->
+        <script type="text/javascript" src="js/page1.js"></script>
+        <script type="text/javascript" src="js/page2.js"></script>
+        <script type="text/javascript" src="js/page3.js"></script>
+        <script type="text/javascript" src="js/page4.js"></script>
+        <script type="text/javascript" src="js/page5.js"></script>
+
+        <!-- inclusione degli script della pagina -->
+        <script type="text/javascript" src="js/navigator.js"></script>
+        <script type="text/javascript" src="js/init.js"></script>
+    </head>
+    <body>
+        <!-- Bootstrap nav-bar -->
+        <nav id="nav-bar" class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul id="topmenu" class="nav navbar-nav"></ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- GMaps container -->
+        <div id="map-canvas"></div>
+
+        <!-- Action button container -->
+        <div id="action-button-container"></div>
+    </body>
+</html>
